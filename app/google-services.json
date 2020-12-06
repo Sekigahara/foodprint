@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "255068237180",
+    "firebase_url": "https://foodprint-d31dd-default-rtdb.firebaseio.com",
+    "project_id": "foodprint-d31dd",
+    "storage_bucket": "foodprint-d31dd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:255068237180:android:77b405d3560588276ac8f9",
+        "android_client_info": {
+          "package_name": "com.example.foodprint"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "255068237180-cfj6esb120vhfr2qjvk07dkm9n9g8r8h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAymuP4cpaHCnPrpvj8trDtSy6aV8zatCU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "255068237180-cfj6esb120vhfr2qjvk07dkm9n9g8r8h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

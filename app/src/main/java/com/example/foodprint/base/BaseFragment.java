@@ -21,10 +21,10 @@ public abstract class BaseFragment<T extends FragmentActivity, U extends BasePre
     protected U mPresenter;
     protected FragmentListener fragmentListener;
 
-    protected void setTitle(String title){
-        this.title = title;
-        fragmentListener.setTitle(title);
-    }
+    //protected void setTitle(String title){
+    //    this.title = title;
+    //    fragmentListener.setTitle(title);
+    //}
 
     protected String getTitle() {
         return title;
@@ -35,7 +35,7 @@ public abstract class BaseFragment<T extends FragmentActivity, U extends BasePre
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = super.onCreateView(inflater, container, savedInstanceState);
         title = getResources().getString(R.string.app_name);
-        setTitle(title);
+        //setTitle(title);
 
         return view;
     }

@@ -12,8 +12,4 @@ public class LoginActivity extends BaseFragmentHolderActivity {
         loginFragment = new LoginFragment();
         setCurrentFragment(loginFragment, false);
     }
-
-    public void setTitle(String title){
-
-    }
 }
