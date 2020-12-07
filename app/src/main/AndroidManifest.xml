@@ -13,16 +13,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Foodprint">
-        <activity android:name=".ListRestaurantActivity"></activity>
-        <activity android:name=".RegisterActivity" />
-        <activity android:name=".SplashScreenActivity">
+
+        <activity android:name=".activity.login.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LoginActivity" />
+
+        <activity android:name=".activity.nearby.NearbyActivity" />
+        <activity android:name=".activity.register.RegisterActivity" />
         <activity android:name=".MainActivity" />
     </application>
 

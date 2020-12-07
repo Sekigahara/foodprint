@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegisterActivity"
+    tools:context=".activity.register.RegisterActivity"
     android:background="@drawable/login_bg">
 
     <ImageView
@@ -45,6 +45,8 @@
         android:ems="10"
         android:hint="Username"
         android:inputType="textPersonName"
+        android:text="kucing1"
+        android:textColor="@color/red_top"
         android:textColorHint="@color/red_top"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -64,6 +66,8 @@
         android:ems="10"
         android:hint="Email"
         android:inputType="textPersonName"
+        android:text="kucing1@gmail.com"
+        android:textColor="@color/red_top"
         android:textColorHint="@color/red_top"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.453"
@@ -80,6 +84,8 @@
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
+        android:text="kucing1"
+        android:textColor="@color/red_top"
         android:textColorHint="@color/red_top"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -98,6 +104,8 @@
         android:ems="10"
         android:hint="Confirm Password"
         android:inputType="textPassword"
+        android:text="kucing1"
+        android:textColor="@color/red_top"
         android:textColorHint="@color/red_top"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -107,14 +115,30 @@
         app:layout_constraintVertical_bias="0.075" />
 
     <Button
-        android:id="@+id/bt_login"
+        android:id="@+id/bt_register"
         android:layout_width="333dp"
         android:layout_height="43dp"
         android:layout_marginBottom="160dp"
         android:background="@drawable/button"
         android:elevation="10dp"
         android:fontFamily="@font/extrabold"
-        android:text="LOGIN"
+        android:text="REGISTER"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/bt_back"
+        android:layout_width="333dp"
+        android:layout_height="43dp"
+        android:layout_marginBottom="92dp"
+        android:background="@drawable/button"
+        android:elevation="10dp"
+        android:fontFamily="@font/extrabold"
+        android:text="BACK"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="26sp"

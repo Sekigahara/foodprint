@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity"
+    tools:context=".activity.login.LoginActivity"
     android:background="@drawable/login_bg">
 
     <ImageView
@@ -45,6 +45,8 @@
         android:ems="10"
         android:hint="Email Address"
         android:inputType="textPersonName"
+        android:text="kucing1@gmail.com"
+        android:textColor="@color/red_top"
         android:textColorHint="@color/red_top"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -64,11 +66,31 @@
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
+        android:text="kucing1"
+        android:textColor="@color/red_top"
         android:textColorHint="@color/red_top"
+        app:layout_constraintBottom_toTopOf="@+id/bt_login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.453"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_email" />
+        app:layout_constraintTop_toBottomOf="@+id/et_email"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/bt_register"
+        android:layout_width="333dp"
+        android:layout_height="43dp"
+        android:layout_marginBottom="164dp"
+        android:background="@drawable/button"
+        android:elevation="10dp"
+        android:fontFamily="@font/extrabold"
+        android:text="REGISTER"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/bt_login"
@@ -84,7 +106,6 @@
         android:textSize="26sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
