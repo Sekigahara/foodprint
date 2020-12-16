@@ -9,6 +9,6 @@ public class RegisterActivity extends BaseFragmentHolderActivity {
         initializeView();
 
         registerFragment = new RegisterFragment();
-        setCurrentFragment(registerFragment, false);
+        setCurrentFragment(registerFragment, true);
     }
 }

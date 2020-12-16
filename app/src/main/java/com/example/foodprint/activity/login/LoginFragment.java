@@ -71,7 +71,6 @@ public class LoginFragment extends BaseFragment<LoginActivity, LoginContract.Pre
 
     public void gotoNewTask(Intent intent){
         startActivity(intent);
-        activity.finish();
     }
 
     public void gotoDashboard(){
