@@ -47,8 +47,9 @@ public class NearbyPresenter implements NearbyContract.Presenter {
                         Toast.makeText(activity, "Sort by Ascending", Toast.LENGTH_LONG).show();
 
                         view.viewNearby(restaurant);
-                    } else
-                        Toast.makeText(activity, restaurant.getStatus(), Toast.LENGTH_LONG).show();
+                    } else {
+                        //Toast.makeText(activity, restaurant.getStatus(), Toast.LENGTH_LONG).show();
+                    }
                 } else {
                     Toast.makeText(activity, "Error2", Toast.LENGTH_LONG).show();
                 }
