@@ -78,16 +78,6 @@ public class NearbyFragment extends BaseFragment<NearbyActivity, NearbyContract.
             gotoNewTask(new Intent(activity, NearbyActivity.class));
         }
 
-        /*
-        ((RecycleViewAdapterNearby) mAdapter).setOnItemClickListener(new RecycleViewAdapterNearby.MyClickListener() {
-            @Override
-            public void onItemClick(int position, View view) {
-                //int id = listOutlet.get(position).getId();
-                Log.d("Dashboard", ">>>>" + position);
-
-            }
-        });
-        */
         return fragmentView;
     }
 
@@ -102,6 +92,13 @@ public class NearbyFragment extends BaseFragment<NearbyActivity, NearbyContract.
 
         mAdapter = new RecycleViewAdapterNearby(data, getResources());
         mRecyclerView.setAdapter(mAdapter);
+
+        ((RecycleViewAdapterNearby) mAdapter).setOnItemClickListener(new RecycleViewAdapterNearby.MyClickListener() {
+            @Override
+            public void onItemClick(int position, View view) {
+                ParsedRestaurantData selectedData = data.get(position);
+            }
+        });
     }
 
     public void gotoNewTask(Intent intent){
