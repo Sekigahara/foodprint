@@ -1,6 +1,7 @@
 package com.example.foodprint.model.restaurant;
 
 import java.io.Serializable;
+import java.util.List;
 
 public class ParsedRestaurantData implements Serializable {
     private Double distance;
@@ -10,6 +11,33 @@ public class ParsedRestaurantData implements Serializable {
     private String photo;
     private String idGoogle;
     private String id;
+    private String vicinity;
+    private Integer priceLevel;
+    private List<String> types;
+
+    public List<String> getTypes(){
+        return types;
+    }
+
+    public void setTypes(List<String> data){
+        this.types = data;
+    }
+
+    public String getVicinity(){
+        return vicinity;
+    }
+
+    public void setVicinity(String vicinity){
+        this.vicinity = vicinity;
+    }
+
+    public Integer getPriceLevel(){
+        return priceLevel;
+    }
+
+    public void setPriceLevel(Integer priceLevel){
+        this.priceLevel = priceLevel;
+    }
 
     public Double getDistance() {
         return distance;
