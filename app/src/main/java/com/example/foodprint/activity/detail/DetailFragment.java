@@ -79,7 +79,10 @@ public class DetailFragment extends BaseFragment<DetailActivity, DetailContract.
         tvTypes.setText(types);
 
         //set rating
-        tvRating.setText(parsedRestaurantData.getRating().toString());
+        if(parsedRestaurantData.getRating() == null)
+            tvRating.setText("Not Rated");
+        else
+            tvRating.setText(parsedRestaurantData.getRating().toString());
 
         //set price level
         tvPriceLevel.setText(parsedRestaurantData.getPriceLevel().toString());
