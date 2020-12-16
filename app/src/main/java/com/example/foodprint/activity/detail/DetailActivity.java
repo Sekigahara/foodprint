@@ -11,6 +11,6 @@ public class DetailActivity extends BaseFragmentHolderActivity {
         ParsedRestaurantData data = (ParsedRestaurantData) getIntent().getSerializableExtra("DATA");
 
         registerFragment = new DetailFragment(data);
-        setCurrentFragment(registerFragment, false);
+        setCurrentFragment(registerFragment, true);
     }
 }
