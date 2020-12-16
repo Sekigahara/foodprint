@@ -35,13 +35,14 @@
 
                 <TextView
                     android:id="@+id/tvLaundryName"
-                    android:layout_gravity="center"
-                    android:layout_width="wrap_content"
-                    android:textSize="20dp"
-                    android:textColor="#6A90B5"
-                    android:fontFamily="@font/bold"
+                    android:layout_width="201dp"
                     android:layout_height="wrap_content"
-                    android:text="Restaurant Name" />
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/bold"
+                    android:maxLines="1"
+                    android:text="Restaurant Name"
+                    android:textColor="#6A90B5"
+                    android:textSize="20dp" />
 
                 <LinearLayout
                     android:layout_marginTop="4dp"
@@ -56,7 +57,7 @@
 
                     <TextView
                         android:id="@+id/tvRating"
-                        android:layout_width="60dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
                         android:layout_marginTop="2dp"

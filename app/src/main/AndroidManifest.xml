@@ -23,6 +23,7 @@
         </activity>
         <activity android:name=".activity.nearby.NearbyActivity" />
         <activity android:name=".activity.register.RegisterActivity" />
+        <activity android:name=".activity.detail.DetailActivity" />
         <activity android:name=".MainActivity" />
     </application>
 
