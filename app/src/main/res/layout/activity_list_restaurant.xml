@@ -3,29 +3,39 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/login_bg">
 
     <TextView
         android:id="@+id/tasksText"
-        android:layout_width="wrap_content"
+        android:layout_width="208dp"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="103dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="660dp"
+        android:fontFamily="@font/bold"
         android:text="@string/list_restaurant"
-        android:textColor="@android:color/black"
-        android:textSize="32sp"
+        android:textColor="@color/white"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.085"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.037"/>
+        app:layout_constraintVertical_bias="0.037" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvNearby"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/tasksText"
-        android:layout_marginTop="25dp"
+        android:layout_height="627dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="104dp"
         android:nestedScrollingEnabled="true"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
