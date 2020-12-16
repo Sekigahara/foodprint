@@ -57,7 +57,6 @@ public class DetailFragment extends BaseFragment<DetailActivity, DetailContract.
 
     public void gotoNewTask(Intent intent){
         startActivity(intent);
-        activity.finish();
     }
 
     private void setData(){

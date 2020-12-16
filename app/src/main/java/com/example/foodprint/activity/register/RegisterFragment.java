@@ -76,7 +76,6 @@ public class RegisterFragment extends BaseFragment<RegisterActivity, RegisterCon
 
     public void gotoNewTask(Intent intent){
         startActivity(intent);
-        activity.finish();
     }
 
     public void gotoLogin(){
