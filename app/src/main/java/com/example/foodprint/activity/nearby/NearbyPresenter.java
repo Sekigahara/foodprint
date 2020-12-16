@@ -99,6 +99,15 @@ public class NearbyPresenter implements NearbyContract.Presenter {
             //set rating
             parsedRestaurantData.setRating(data.get(i).getRating());
 
+            //set vicinity
+            parsedRestaurantData.setVicinity(data.get(i).getVicinity());
+
+            //set price level
+            parsedRestaurantData.setPriceLevel(data.get(i).getPriceLevel());
+
+            //set types
+            parsedRestaurantData.setTypes(data.get(i).getTypes());
+
             //append data
             parsedData.add(parsedRestaurantData);
         }

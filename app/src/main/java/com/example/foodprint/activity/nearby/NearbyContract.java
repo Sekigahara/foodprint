@@ -15,6 +15,7 @@ import java.util.List;
 public interface NearbyContract {
     interface View extends BaseView<Presenter> {
         void gotoNewTask(Intent intent);
+        void gotoNewTask(Intent intent, ParsedRestaurantData data);
         void viewNearby(Restaurant restaurant);
     }
 

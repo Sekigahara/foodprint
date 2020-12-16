@@ -20,6 +20,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.foodprint.R;
+import com.example.foodprint.activity.detail.DetailActivity;
 import com.example.foodprint.base.BaseFragment;
 import com.example.foodprint.model.restaurant.DataRestaurant;
 import com.example.foodprint.model.restaurant.ParsedRestaurantData;
@@ -78,16 +79,6 @@ public class NearbyFragment extends BaseFragment<NearbyActivity, NearbyContract.
             gotoNewTask(new Intent(activity, NearbyActivity.class));
         }
 
-        /*
-        ((RecycleViewAdapterNearby) mAdapter).setOnItemClickListener(new RecycleViewAdapterNearby.MyClickListener() {
-            @Override
-            public void onItemClick(int position, View view) {
-                //int id = listOutlet.get(position).getId();
-                Log.d("Dashboard", ">>>>" + position);
-
-            }
-        });
-        */
         return fragmentView;
     }
 
@@ -102,11 +93,24 @@ public class NearbyFragment extends BaseFragment<NearbyActivity, NearbyContract.
 
         mAdapter = new RecycleViewAdapterNearby(data, getResources());
         mRecyclerView.setAdapter(mAdapter);
+
+        ((RecycleViewAdapterNearby) mAdapter).setOnItemClickListener(new RecycleViewAdapterNearby.MyClickListener() {
+            @Override
+            public void onItemClick(int position, View view) {
+                ParsedRestaurantData selectedData = data.get(position);
+                gotoNewTask(new Intent(activity, DetailActivity.class), selectedData);
+            }
+        });
     }
 
     public void gotoNewTask(Intent intent){
         startActivity(intent);
         activity.finish();
+    }
+
+    public void gotoNewTask(Intent intent, ParsedRestaurantData data){
+        intent.putExtra("DATA", data);
+        gotoNewTask(intent);
     }
 
     public void setPresenter(NearbyContract.Presenter presenter){
