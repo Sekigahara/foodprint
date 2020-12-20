@@ -14,6 +14,6 @@ public interface DetailContract {
     }
 
     interface Presenter extends BasePresenter {
-
+        String onDirectionClick(Double latitude, Double longitude, String name);
     }
 }

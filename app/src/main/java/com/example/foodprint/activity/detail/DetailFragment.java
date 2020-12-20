@@ -1,6 +1,7 @@
 package com.example.foodprint.activity.detail;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -52,6 +53,17 @@ public class DetailFragment extends BaseFragment<DetailActivity, DetailContract.
 
         setData();
 
+        btDirection.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                String URL = mPresenter.onDirectionClick(parsedRestaurantData.getLat(),
+                                                         parsedRestaurantData.getLng(),
+                                                         parsedRestaurantData.getName());
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(URL));
+                getContext().startActivity(intent);
+            }
+        });
+
         return fragmentView;
     }
 
@@ -85,7 +97,10 @@ public class DetailFragment extends BaseFragment<DetailActivity, DetailContract.
             tvRating.setText(parsedRestaurantData.getRating().toString());
 
         //set price level
-        tvPriceLevel.setText(parsedRestaurantData.getPriceLevel().toString());
+        if(parsedRestaurantData.getPriceLevel() == null)
+            tvPriceLevel.setText("1");
+        else
+            tvPriceLevel.setText(parsedRestaurantData.getPriceLevel().toString());
     }
 
     private String getTypes(List<String> data){
