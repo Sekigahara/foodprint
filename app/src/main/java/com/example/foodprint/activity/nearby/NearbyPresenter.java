@@ -77,7 +77,12 @@ public class NearbyPresenter implements NearbyContract.Presenter {
             Double toLng = data.get(i).getGeometry().getLocation().getLng();
             LatLng to  = new LatLng(toLat, toLng);
 
+            //set distance
             parsedRestaurantData.setDistance(countDistance(from, to));
+
+            //set lat and lng
+            parsedRestaurantData.setLat(data.get(i).getGeometry().getLocation().getLat());
+            parsedRestaurantData.setLng(data.get(i).getGeometry().getLocation().getLng());
 
             //set google id
             parsedRestaurantData.setIdGoogle(data.get(i).getPlaceId());

@@ -37,4 +37,8 @@ public class DetailPresenter implements DetailContract.Presenter{
 
     }
 
+    public String onDirectionClick(Double latitude, Double longitude, String name){
+        return "http://maps.google.com/maps?q=loc:" + latitude + "," + longitude +"(" + name + ")";
+    }
+
 }
