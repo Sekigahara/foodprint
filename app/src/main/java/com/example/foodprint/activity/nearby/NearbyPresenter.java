@@ -35,7 +35,7 @@ public class NearbyPresenter implements NearbyContract.Presenter {
         String location = lat.toString() + ", " + lng.toString();
         UtilProvider.initLocationSession(lat ,lng);
 
-        Toast.makeText(activity, "lat : " + lat.toString() + " lng : " + lng.toString(), Toast.LENGTH_LONG).show();
+        //Toast.makeText(activity, "lat : " + lat.toString() + " lng : " + lng.toString(), Toast.LENGTH_LONG).show();
         mGoogleApiService = UtilsApi.getGoogleApiService();
         Call<Restaurant> call = mGoogleApiService.getNearestLaundry(types, location, radius, sensor, key);
         call.enqueue(new Callback<Restaurant>() {
@@ -44,11 +44,9 @@ public class NearbyPresenter implements NearbyContract.Presenter {
                 if (response.isSuccessful() == true) {
                     Restaurant restaurant = response.body();
                     if (restaurant.getStatus().equals("OK")) {
-                        Toast.makeText(activity, "Sort by Ascending", Toast.LENGTH_LONG).show();
-
                         view.viewNearby(restaurant);
                     } else {
-                        //Toast.makeText(activity, restaurant.getStatus(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(activity, restaurant.getStatus(), Toast.LENGTH_LONG).show();
                     }
                 } else {
                     Toast.makeText(activity, "Error2", Toast.LENGTH_LONG).show();
